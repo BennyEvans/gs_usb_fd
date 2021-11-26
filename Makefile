@@ -1,4 +1,4 @@
-obj-m := gs_usb_fd.o 
+obj-m := gs_usb.o 
 
 KDIR  := /lib/modules/$(shell uname -r)/build
 PWD   := $(shell pwd)
@@ -11,4 +11,4 @@ clean:
 	$(MAKE) -C $(KDIR) M=$(PWD) clean
 
 format:
-	$(LINDENT) gs_usb_fd.c
+	$(LINDENT) gs_usb.c
